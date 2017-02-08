@@ -1,0 +1,40 @@
+<!--
+  Generated template for the Camera page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Camera</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="takePic()">
+        <ion-icon name="camera"></ion-icon>
+      </button>
+    </ion-buttons>
+    
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item *ngFor="let image of images" >
+
+      <ion-thumbnail item-left>
+        <img [src]="image.imgData">
+      </ion-thumbnail>
+
+      <h2>{{ image.timestamp | date:'yMd' }}</h2>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

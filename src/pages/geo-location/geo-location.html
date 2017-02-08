@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<ion-header>
+
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>GEO LOCATION</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="getPosition()">
+        <ion-icon name="locate"></ion-icon>
+      </button>
+    </ion-buttons>
+    
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+ 
+  MY POSITION: {{myPosition}}
+  <label>{{errorCode}}</label>
+</ion-content>
